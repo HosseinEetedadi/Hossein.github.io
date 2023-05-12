@@ -1,1 +1,261 @@
-# test.github.io
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.preshow{
+    padding: 60px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  background-color: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+* {
+    box-sizing: border-box;
+}
+nav{
+    float: left;
+    width: 30%;
+    height: 400px;
+    border-radius: 20px;
+    background:none;
+    padding: 20px;
+    display: grid;
+}
+nav ul{
+    
+  list-style-type: none;
+  padding: 0;
+
+}
+ul{
+    list-style-type: none;
+}
+
+.firstli{
+
+text-align: center;
+border-style: solid;
+background-color: aliceblue;
+border-width: 5px 1px;
+width: 200px;
+height: 120px;
+line-height: 100px;
+font-weight: bold;
+font-size: large;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+display: inline-block;
+margin-left: 180px;}
+
+
+.secondli{
+text-align: center;
+background-color: aliceblue;
+border-style: solid;
+border-width: 5px 1px;
+font-weight: bold;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: large;
+width: 200px;
+height: 120px;
+line-height: 100px;
+display: inline-block;
+margin-left: 300px;
+}
+
+
+article{
+    float: left;
+    padding: 20px;
+    width: 100%;
+    background-color:blue;
+    height: 300px;
+}
+section:after{
+    display: table;
+    clear: both;
+    content: "";
+}
+footer {
+  background-color: #777;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.photostyle{
+border-image: round;
+padding: 0px;
+position: relative;
+height: 400px;
+width: 400px;
+border-radius: 40px;
+}
+.photostyle:after{
+    display: table;
+    clear: both;
+    content: "";
+}
+.container{
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+    
+}
+li{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.toggcss{
+    color:"gray";
+    font-weight: "bold";
+}
+.information{
+text-align: center;
+display: inline-block;
+border-style: solid;
+border-width: 2px 1px;
+border-radius: 10px;
+background-color: lightsteelblue;
+width: 600px;
+height: 500px;
+margin-top: 3%;
+margin-left: 30%;
+margin-right: 50%;
+margin-bottom: 10px;
+line-height: 100px;
+
+}
+.toggclass{
+    display: none;
+}
+
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<script>
+$.noConflict();
+jQuery(document).ready(function(){
+    // jQuery("#cont").click(function(){
+    //     jQuery("#bio").css({"background-color":"white","font-weight": "bold"})
+    //     jQuery("#work").css({"background-color":"white","font-weight": "bold"})
+    //     jQuery("#edu").css({"background-color":"white","font-weight": "bold"})
+    //     jQuery("#project").css({"background-color":"white","font-weight": "bold"})
+    // });
+    jQuery("#bio").click(function(){
+        
+        jQuery("#showWork").fadeOut();
+        jQuery("#showEducation").fadeOut();
+        jQuery("#showProject").fadeOut();
+        jQuery("#showBio").fadeIn();
+        jQuery(this).css({"background-color":"gray","font-weight": "bold"})
+        jQuery("#work").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#edu").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#project").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#info").addClass("information")
+    });
+    jQuery("#work").click(function(){
+        
+        jQuery("#showBio").fadeOut();
+        jQuery("#showEducation").fadeOut();
+        jQuery("#showProject").fadeOut();
+        jQuery("#showWork").fadeIn();
+        jQuery(this).css({"background-color":"gray","font-weight": "bold"})
+        jQuery("#bio").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#edu").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#project").css({"background-color":"white","font-weight": "bold"})
+        
+    });
+    jQuery("#edu").click(function(){
+        jQuery("#showWork").fadeOut();
+        jQuery("#showBio").fadeOut();
+        jQuery("#showProject").fadeOut();
+        jQuery("#showEducation").fadeIn();
+        jQuery(this).css({"background-color":"gray","font-weight": "bold"})
+        jQuery("#work").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#bio").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#project").css({"background-color":"white","font-weight": "bold"})
+        
+        
+    });
+    jQuery("#project").click(function(){
+        
+        jQuery("#showWork").fadeOut();
+        jQuery("#showBio").fadeOut();
+        jQuery("#showEducation").fadeOut();
+        jQuery("#showProject").fadeIn();
+        jQuery(this).css({"background-color":"gray","font-weight": "bold"})
+        jQuery("#work").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#edu").css({"background-color":"white","font-weight": "bold"})
+        jQuery("#bio").css({"background-color":"white","font-weight": "bold"})
+        
+    });
+});
+</script>
+
+</head>
+<body>
+
+    <div class="preshow">
+     Welcome To My HomePage :))
+    </div>
+
+    <div id="cont" class="container">
+      <div style="text-align: left;">
+        <img class="photostyle" src="E:\Hossein\مدارک\photo.jpg" alt="Oops!!" >
+      </div>  
+
+    <div style="text-align: left ;padding: 30px;">
+        <p style="font-weight: bold;font-size: large;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">You can click on each section and figure out who am I :)</p>
+        <p id="bio"  class="firstli"><a href="#"> Biography</a></p>
+        <p id="edu" class="firstli"><a href="#"> Education</a></p>
+        <br>
+        <p id="work" class="secondli"><a href="#"> Work Resume</a></p>
+        <p id="project" class="secondli"><a href="#"> Projects</a></p>
+</div>
+</div>
+
+    <!-- <footer></footer> -->
+<div id="info">
+    <div id="showBio" style="display: none;">
+        My name is <b>This is massege to validate the bio peocess :)</b>
+     </div>
+     <div id="showEducation" style="display: none;">
+         My name is <b>This is massege to validate the education peocess :)</b>
+      </div>
+      <div id="showProject" style="display: none;">
+         My name is <b>This is massege to validate the project peocess :)</b>
+      </div>
+      <div id="showWork" style="display: none;">
+        My name is <b>This is massege to validate the Work peocess :)</b>
+      </div>
+    
+    </div>
+    
+    
+    <footer>
+        <ul>
+            <li><b style="font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: aquamarine;">Contact Me </b></li>
+            <li><img src="E:\VSCode\VSCode Project\git.png" style="height: 20px;width: 20px; border-radius: 10px;"><a href="https://github.com/HosseinEetedadi" target="_blank">  Github</a></li>
+            <li><img src="E:\VSCode\VSCode Project\linkedin.png" style="height: 20px;width: 20px; border-radius: 10px;"><a href="https://quera.org/profile/Hossein_Eetedadi" target="_blank">  Quera</a></li>
+            <li><img src="E:\VSCode\VSCode Project\linkedin.png" style="height: 20px;width: 20px; border-radius: 10px;"><a href="https://www.linkedin.com/in/hossein-eetedadi/" target="_blank">  LinkedIn</a></li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>
